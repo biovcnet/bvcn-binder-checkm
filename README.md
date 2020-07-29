@@ -87,7 +87,7 @@ The bin directory contains directories for all bins, with the Prodigal gene call
 and HMM annotation for all bins (hmmer*txt files). Learn more about how that's done in the BVCN functional annotation topic.  
 The storage directory contains summary files used to generate the final output, as well as 2 directories.
 The tree subdirectory contains the files required for placement in the phylogenetic tree, to determine marker sets.
-The aai_qa subdirectory contains directories for all bins with "contamination". We will look at one of those in a little more detail:
+The aai_qa subdirectory contains directories for all bins with "contamination". We will look at one of those in a little more detail:  
 ```ls storage/aai_qa/Candidatus_Brocadia_sinica```  
 ```cat storage/aai_qa/Candidatus_Brocadia_sinica/*```  
   
@@ -98,6 +98,8 @@ Using those, you can assess whether the genes represent true contamination, or a
 **Other CheckM options**  
 CheckM has a number of options to visualize and correct bins. We will run and inspect some of the plotting routines 
 NOTE: in the current bioconda version of CheckM (1.1.2), the tetra and GC plotting is broken. There is a new version (1.1.3) where this is fixed.  
+  
+We will run several other plotting commands and see what they look like:   
 ```checkm nx_plot -x fna ncbi-genomes-2020-07-28/ extra_info/plots/```  
 ```checkm len_hist -x fna ncbi-genomes-2020-07-28/ extra_info/plots```  
 ```checkm marker_plot extra_info/checkm_lineage_wf_out/ ncbi-genomes-2020-07-28/ extra_info/plots```  
