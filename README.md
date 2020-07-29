@@ -1,9 +1,9 @@
 ## Binder for BVCN bin evaluation lesson
 
 Initially forked from [here](https://github.com/binder-examples/conda). Thank you to the awesome [binder](https://mybinder.org/) team!
-
-[![Binder](https://mybinder.org/badge_logo.svg)](https://gesis.mybinder.org/binder/v2/gh/astrobiomike/bvcn-binder-checkm/master?urlpath=lab)
-
+  
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/biovcnet/bvcn-binder-checkm/master?urlpath=lab)
+  
 Part of the [Bioinformatics Virtual Coordination Network](https://biovcnet.github.io/) :)
 
 
@@ -35,8 +35,25 @@ Doing so will get us the assemblies of choice as a comperessed tar file (genome_
    
    
 **Organization**  
-We'll first unpack the genomes:   
+We'll first unpack the top level directory:   
 ```tar -xvf genome_assemblies_genome_fasta.tar```
+  
+go into the directory and check the README:  
+```cd ncbi-genomes-2020-07-28/```  
+```cat README.txt```  
+   
+unpack the genomes and inspect:  
+```for i in *gz ; do gunzip $i ; done```  
+```ls -lh```  
+  
+  
+**running CheckM core command**  
+We'll start with a look at all the options CheckM has to offer:  
+```checkm -h```
 
+We will	not be running the preferred "lineage workflow" because	of memory limitations in the binder.  
+Instead, we will run the "taxonomy workflow":
+```checkm taxon_list -h```
+```checkm taxon_list```
 
 
