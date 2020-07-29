@@ -43,7 +43,7 @@ go into the directory and check the README:
 ```cat README.txt```  
    
 unpack the genomes and inspect:  
-```for i in *gz ; do gunzip $i ; done```  
+```gunzip *gz``` OR  ```for i in *gz ; do gunzip $i ; done```  
 ```ls -lh```  
   
   
@@ -56,4 +56,14 @@ Instead, we will run the "taxonomy workflow":
 ```checkm taxon_list -h```
 ```checkm taxon_list```
 
-
+For now we will use domain "Bacteria":
+Note: Running this command will take approximately 25 minutes   
+If you don't want to wait this long, continue below  
+```checkm taxonomy_wf -h```
+```checkm taxonomy_wf -t 4 -x fna -f checkm_results --tab_table domain Bacteria . checkm_out```
+    
+While this is running, we will inspect a precomputed lineage workflow output directory.  
+  
+  
+**Inspecting lineage workflow output**  
+First Open a new terminal using the "+" button in the top left corner of the jupyter lab screen, just under "File".
