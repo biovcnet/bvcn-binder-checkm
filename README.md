@@ -1,4 +1,4 @@
-# Binder for BVCN Comparative Genomics lesson
+## Binder for BVCN bin evaluation lesson
 
 Initially forked from [here](https://github.com/binder-examples/conda). Thank you to the awesome [binder](https://mybinder.org/) team!
 
@@ -32,8 +32,11 @@ To actually get the assemblies, we scroll back up to the top, and click Assembli
 This will bring us [here](https://www.ncbi.nlm.nih.gov/assembly?LinkName=bioproject_assembly_all&from_uid=274364), 
 where we can download all constituent assemblies using the button at the top. 
 Doing so will get us the assemblies of choice as a comperessed tar file (genome_assemblies_genome_fasta.tar). This file is present in the binder.
-
-
+   
+   
+**Organization**  
+We'll first unpack the genomes:   
+```tar -xvf genome_assemblies_genome_fasta.tar```
 
 
 
