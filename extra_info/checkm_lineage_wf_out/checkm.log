@@ -1,35 +1,35 @@
-[2020-07-28 21:02:44] INFO: CheckM v1.1.2
-[2020-07-28 21:02:44] INFO: checkm lineage_wf -x fna -t 20 --pplacer_threads 20 -f checkm_lineage_wf_results --tab_table . checkm_lineage_wf_out
-[2020-07-28 21:02:44] INFO: [CheckM - tree] Placing bins in reference genome tree.
-[2020-07-28 21:02:45] INFO: Identifying marker genes in 23 bins with 20 threads:
-[2020-07-28 21:03:43] INFO: Saving HMM info to file.
-[2020-07-28 21:03:43] INFO: Calculating genome statistics for 23 bins with 20 threads:
-[2020-07-28 21:03:43] INFO: Extracting marker genes to align.
-[2020-07-28 21:03:43] INFO: Parsing HMM hits to marker genes:
-[2020-07-28 21:03:45] INFO: Extracting 43 HMMs with 20 threads:
-[2020-07-28 21:03:45] INFO: Aligning 43 marker genes with 20 threads:
-[2020-07-28 21:03:45] INFO: Reading marker alignment files.
-[2020-07-28 21:03:45] INFO: Concatenating alignments.
-[2020-07-28 21:03:45] INFO: Placing 23 bins into the genome tree with pplacer (be patient).
-[2020-07-28 21:09:27] INFO: { Current stage: 0:06:42.727 || Total: 0:06:42.727 }
-[2020-07-28 21:09:27] INFO: [CheckM - lineage_set] Inferring lineage-specific marker sets.
-[2020-07-28 21:09:27] INFO: Reading HMM info from file.
-[2020-07-28 21:09:27] INFO: Parsing HMM hits to marker genes:
-[2020-07-28 21:09:28] INFO: Determining marker sets for each genome bin.
-[2020-07-28 21:09:32] INFO: Marker set written to: checkm_lineage_wf_out/lineage.ms
-[2020-07-28 21:09:32] INFO: { Current stage: 0:00:05.638 || Total: 0:06:48.366 }
-[2020-07-28 21:09:32] INFO: [CheckM - analyze] Identifying marker genes in bins.
-[2020-07-28 21:09:33] INFO: Identifying marker genes in 23 bins with 20 threads:
-[2020-07-28 21:11:28] INFO: Saving HMM info to file.
-[2020-07-28 21:11:29] INFO: { Current stage: 0:01:56.351 || Total: 0:08:44.718 }
-[2020-07-28 21:11:29] INFO: Parsing HMM hits to marker genes:
-[2020-07-28 21:11:35] INFO: Aligning marker genes with multiple hits in a single bin:
-[2020-07-28 21:11:37] INFO: { Current stage: 0:00:07.795 || Total: 0:08:52.513 }
-[2020-07-28 21:11:37] INFO: Calculating genome statistics for 23 bins with 20 threads:
-[2020-07-28 21:11:37] INFO: { Current stage: 0:00:00.317 || Total: 0:08:52.831 }
-[2020-07-28 21:11:37] INFO: [CheckM - qa] Tabulating genome statistics.
-[2020-07-28 21:11:37] INFO: Calculating AAI between multi-copy marker genes.
-[2020-07-28 21:11:37] INFO: Reading HMM info from file.
-[2020-07-28 21:11:37] INFO: Parsing HMM hits to marker genes:
-[2020-07-28 21:11:44] INFO: QA information written to: checkm_lineage_wf_results
-[2020-07-28 21:11:44] INFO: { Current stage: 0:00:07.328 || Total: 0:09:00.159 }
+[2020-07-28 21:59:03] INFO: CheckM v1.1.2
+[2020-07-28 21:59:03] INFO: checkm lineage_wf -x fna -t 20 --pplacer_threads 20 -f extra_info/checkm_lineage_wf_results --tab_table ncbi-genomes-2020-07-28/ extra_info/checkm_lineage_wf_out
+[2020-07-28 21:59:03] INFO: [CheckM - tree] Placing bins in reference genome tree.
+[2020-07-28 21:59:03] INFO: Identifying marker genes in 23 bins with 20 threads:
+[2020-07-28 22:00:02] INFO: Saving HMM info to file.
+[2020-07-28 22:00:02] INFO: Calculating genome statistics for 23 bins with 20 threads:
+[2020-07-28 22:00:02] INFO: Extracting marker genes to align.
+[2020-07-28 22:00:02] INFO: Parsing HMM hits to marker genes:
+[2020-07-28 22:00:04] INFO: Extracting 43 HMMs with 20 threads:
+[2020-07-28 22:00:04] INFO: Aligning 43 marker genes with 20 threads:
+[2020-07-28 22:00:04] INFO: Reading marker alignment files.
+[2020-07-28 22:00:04] INFO: Concatenating alignments.
+[2020-07-28 22:00:04] INFO: Placing 23 bins into the genome tree with pplacer (be patient).
+[2020-07-28 22:05:44] INFO: { Current stage: 0:06:41.115 || Total: 0:06:41.115 }
+[2020-07-28 22:05:44] INFO: [CheckM - lineage_set] Inferring lineage-specific marker sets.
+[2020-07-28 22:05:44] INFO: Reading HMM info from file.
+[2020-07-28 22:05:44] INFO: Parsing HMM hits to marker genes:
+[2020-07-28 22:05:45] INFO: Determining marker sets for each genome bin.
+[2020-07-28 22:05:49] INFO: Marker set written to: extra_info/checkm_lineage_wf_out/lineage.ms
+[2020-07-28 22:05:49] INFO: { Current stage: 0:00:05.585 || Total: 0:06:46.701 }
+[2020-07-28 22:05:49] INFO: [CheckM - analyze] Identifying marker genes in bins.
+[2020-07-28 22:05:50] INFO: Identifying marker genes in 23 bins with 20 threads:
+[2020-07-28 22:07:44] INFO: Saving HMM info to file.
+[2020-07-28 22:07:46] INFO: { Current stage: 0:01:56.243 || Total: 0:08:42.944 }
+[2020-07-28 22:07:46] INFO: Parsing HMM hits to marker genes:
+[2020-07-28 22:07:52] INFO: Aligning marker genes with multiple hits in a single bin:
+[2020-07-28 22:07:53] INFO: { Current stage: 0:00:07.588 || Total: 0:08:50.533 }
+[2020-07-28 22:07:53] INFO: Calculating genome statistics for 23 bins with 20 threads:
+[2020-07-28 22:07:54] INFO: { Current stage: 0:00:00.465 || Total: 0:08:50.998 }
+[2020-07-28 22:07:54] INFO: [CheckM - qa] Tabulating genome statistics.
+[2020-07-28 22:07:54] INFO: Calculating AAI between multi-copy marker genes.
+[2020-07-28 22:07:54] INFO: Reading HMM info from file.
+[2020-07-28 22:07:54] INFO: Parsing HMM hits to marker genes:
+[2020-07-28 22:08:01] INFO: QA information written to: extra_info/checkm_lineage_wf_results
+[2020-07-28 22:08:01] INFO: { Current stage: 0:00:07.353 || Total: 0:08:58.352 }
