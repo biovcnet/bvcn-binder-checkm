@@ -47,7 +47,7 @@ unpack the genomes and inspect:
 ```gunzip *gz```
 ```ls -lh```  
   
-Optional: rename the bins to more meaningful names:
+Rename the bins to more meaningful names:  
 ```perl -p -i -e 's/ /_/g' ../PRJNA274364_AssemblyDetails.txt```  
 ```while read line ; do OLD=$(echo $line | cut -f1 -d' ') ; NEW=$(echo $line | cut -f6 -d' ') ; mv "$OLD"* "$NEW".fna ; done < ../PRJNA274364_AssemblyDetails.txt```   
   
@@ -74,4 +74,36 @@ While this is running, we will inspect a precomputed lineage workflow output dir
 First, open a new terminal using the "+" button in the top left corner of the jupyter lab screen, just under "File".  
 In this new terminal, go into the "extra info" directory, and inspect the content of the "checkm_lineage_wf_out"  
 ```cd extra_info```   
-```ls checkm_lineage_wf_out```
+```ls -lh checkm_lineage_wf_out```  
+  
+We see 2 directories and 2 files, which we will inspect a bit:
+```cd checkm_lineage_wf_out```  
+```head checkm.log```  
+```cat lineage.ms```   
+```ls -lh bins```  
+```ls -lh storage```  
+   
+The bin directory contains directories for all bins, with the Prodigal gene calls (.faa file and .gff file), 
+and HMM annotation for all bins (hmmer*txt files). Learn more about how that's done in the BVCN functional annotation topic.  
+The storage directory contains summary files used to generate the final output, as well as 2 directories.
+The tree subdirectory contains the files required for placement in the phylogenetic tree, to determine marker sets.
+The aai_qa subdirectory contains directories for all bins with "contamination". We will look at one of those in a little more detail:
+```ls storage/aai_qa/Candidatus_Brocadia_sinica```  
+```cat storage/aai_qa/Candidatus_Brocadia_sinica/*```  
+  
+The files in these directories are alignments of the duplicated marker genes checkm identified. 
+Using those, you can assess whether the genes represent true contamination, or are duplicated in the genome.   
+
+
+**Other CheckM options**  
+CheckM has a number of options to visualize and correct bins. We will run and inspect some of the plotting routines 
+NOTE: in the current bioconda version of CheckM (1.1.2), the tetra and GC plotting is broken. There is a new version (1.1.3) where this is fixed.  
+```checkm nx_plot -x fna ncbi-genomes-2020-07-28/ extra_info/plots/```  
+```checkm len_hist -x fna ncbi-genomes-2020-07-28/ extra_info/plots```  
+```checkm marker_plot extra_info/checkm_lineage_wf_out/ ncbi-genomes-2020-07-28/ extra_info/plots```  
+  
+CheckM has several options for further analysis, which require BAM files for coverage, or the source assembly for the bins. 
+We have not included those resources here, so can not run them in the binder.
+When inspecting your own bins, you'll typically have those files available, as they are the source files for binning.  
+  
+If you run into issue working through this binder, feel free to contact me at dspeth@caltech.edu  
